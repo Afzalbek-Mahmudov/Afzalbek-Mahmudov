@@ -12,6 +12,7 @@
 💼 Skilled in building scalable web APIs and systems using Django REST Framework, with a focus on clean code and efficient database design.
 
 🚀 Committed to mastering backend technologies, server logic, and API development to create impactful, high-performance applications.
+
 ---
 
 ## 🌐 Socials
@@ -21,8 +22,10 @@
 [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/Afzalbek)
 [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/Afzalbek_m)
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:afzalbek.777777@gmail.com)
+[![Telegram](https://img.shields.io/badge/Telegram-%2300A8E1.svg?logo=Telegram&logoColor=white)](https://t.me/mahmudov_blog)
 
 ---
+
 
 ## 💻 Tech Stack
 
