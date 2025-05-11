@@ -39,11 +39,23 @@
 
 ## 📊 GitHub Stats
 
-![](https://github-readme-stats.vercel.app/api?username=Afzalbek-Mahmudov&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
-<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Afzalbek-Mahmudov&theme=dark&hide_border=false)
-<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Afzalbek-Mahmudov&theme=dark&hide_border=false&layout=compact)
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api?username=Afzalbek-Mahmudov&theme=dark&hide_border=false&include_all_commits=true&count_private=true" alt="GitHub Stats" height="180"/>
+        <br/>
+        <img src="https://nirzak-streak-stats.vercel.app/?user=Afzalbek-Mahmudov&theme=dark&hide_border=false" alt="Streak Stats" height="180"/>
+        <br/>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Afzalbek-Mahmudov&theme=dark&hide_border=false&layout=compact" alt="Top Languages" height="150"/>
+      </td>
+      <td>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXdxeXp4bDBlbTQybGI0ZjQxODJ3N3B3eGZmdzN1bHIyem1lanVmaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WFZvB7VIXBgiz3oDXE/giphy.gif" alt="Coding GIF" width="350" style="border-radius: 10px;" />
+      </td>
+    </tr>
+  </table>
+</div>
+
 
 ---
 
@@ -103,3 +115,39 @@ docker run -d -p 8000:8000 backend-app
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Afzalbek-Mahmudov/Afzalbek-Mahmudov/output/github-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/Afzalbek-Mahmudov/Afzalbek-Mahmudov/output/github-snake.svg" />
 </picture>
+
+<h2 align="center">😄 Fun Facts</h2>
+
+<table>
+  <tr>
+    <td width="33%">
+
+💡 **Bug Hunter**  
+&nbsp;&nbsp;&nbsp;&nbsp;Solving bugs is like playing brain games – I enjoy every bit of it!
+
+</td>
+    <td width="33%">
+
+📚 **Lifelong Learner**  
+&nbsp;&nbsp;&nbsp;&nbsp;I’m always diving into new backend concepts, tools, and best practices.
+
+</td>
+    <td width="33%" align="center">
+
+☕ **Caffeine? Nope! Milk Tea!**  
+&nbsp;&nbsp;&nbsp;&nbsp;Milk tea keeps me going when I'm deep into code!
+
+</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExejVwam5vamw1bHlqZHJxYzAzN3AyZ3hxNTRyNjllZXJyMGJ6N2poeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kOe46rvaOLg8smLgs5/giphy.gif" width="200" alt="coding-gif"/>
+    </td>
+    <td align="center">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXRtdnYwcWt4bGhsZmR6dWYzNno4Mno5NzRtaDYweHk1aDJnZm9kcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VDdh2wgmzsXAc7FCd7/giphy.gif" width="200" alt="funny-coding-gif"/>
+    </td>
+    <td align="center">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3c1ZGgxZDc5bGZia2o3dG81emhxZmFuMXd6aTF3N3Bia2NiZ3lmYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/niCkjKTl2NbA0jySxw/giphy.gif" width="200" alt="gif3"/>
+    </td>
+  </tr>
+</table>
