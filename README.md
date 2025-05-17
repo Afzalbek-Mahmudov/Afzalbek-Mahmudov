@@ -1,7 +1,12 @@
 <h1 align="center">Hi there, I'm Afzalbek 👋</h1>
 <p align="center">
+  <!-- Yuqori banner -->
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5BCEFA,100:003087&height=200&section=header&text=Afzalbek%20Mahmudov&fontSize=40&fontAlignY=35&animation=fadeIn" alt="banner"/>
+
+  <!-- Tagidagi sizning rasmingiz (o‘lchami banner eni bilan bir xil, bo‘yi katta) -->
+  <img src="https://github.com/Afzalbek-Mahmudov/Afzalbek-Mahmudov/blob/main/me.jpg" alt="Afzalbek" width="85%" height="850"/>
 </p>
+
 
 ---
 
