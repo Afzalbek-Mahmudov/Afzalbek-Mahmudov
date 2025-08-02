@@ -1,8 +1,11 @@
 <h1 align="center">Hi there, I'm Afzalbek 👋</h1>
 <p align="center">
   
-    <!-- Typing SVG -->
+<!-- Typing SVG -->
+<div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Backend+Developer+from+Uzbekistan;Django+%26+FastAPI+Expert;Building+Scalable+Web+APIs;Clean+Code+Enthusiast;Always+Learning+New+Technologies" alt="Typing SVG" />
+</div>
+
   
   <!-- Yuqori banner -->
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5BCEFA,100:003087&height=200&section=header&text=Afzalbek%20Mahmudov&fontSize=40&fontAlignY=35&animation=fadeIn" alt="banner"/>
