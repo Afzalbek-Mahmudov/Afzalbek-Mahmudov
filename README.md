@@ -12,7 +12,7 @@
 
 
   <!-- Tagidagi sizning rasmingiz -->
-  <img src="https://github.com/Afzalbek-Mahmudov/Afzalbek-Mahmudov/blob/main/myphoto.jpg" alt="Afzalbek" width="100%" height="800"/>
+  <img src="https://github.com/Afzalbek-Mahmudov/Afzalbek-Mahmudov/blob/main/myphoto.jpg" alt="Afzalbek" width="85%" height="800"/>
 </p>
 
 
