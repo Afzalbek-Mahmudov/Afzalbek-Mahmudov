@@ -56,7 +56,7 @@ me.say_hi()
 - 🌱 Learning **Advanced DRF, Celery, Django Channels**
 - 👯 Looking to collaborate on **Open Source Django Projects**
 - 💬 Ask me about **Django, DRF, PostgreSQL, API Design**
-- 📫 Reach me at **afzalbek.777777@gmail.com**
+- 📫 Reach me at **afzalbek.makhmudovv@gmail.com**
 - ⚡ Fun fact: **I debug with milk tea, not coffee! ☕🥛**
 
 ---
@@ -65,7 +65,7 @@ me.say_hi()
 
 <p align="center">
   <a href="https://t.me/mahmudov_blog"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/></a>
-  <a href="mailto:afzalbek.777777@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="mailto:afzalbek.makhmudovv@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://x.com/Afzalbek_m"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
   <a href="https://pinterest.com/afzalbek_mahmudov"><img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white"/></a>
   <a href="https://linkedin.com/in/yourprofile"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
