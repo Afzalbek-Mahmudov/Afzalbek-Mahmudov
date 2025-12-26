@@ -29,16 +29,16 @@ class BackendDeveloper:
         self.role = "Backend Developer"
         self.location = "Uzbekistan 🇺🇿"
         self.languages = ["Python", "C++", "SQL"]
-        self.frameworks = ["Django", "FastAPI", "DRF"]
+        self.frameworks = ["Django", "DRF", "Celery"]
         self.databases = ["PostgreSQL", "Redis"]
         self.tools = ["Docker", "Git", "Postman"]
         
     def current_focus(self):
         return [
-            "Building scalable REST APIs",
+            "Building scalable REST APIs with DRF",
             "Database optimization",
-            "Microservices architecture",
-            "Clean code practices"
+            "Django best practices",
+            "Clean code & SOLID principles"
         ]
     
     def say_hi(self):
@@ -52,11 +52,11 @@ me.say_hi()
 
 ### 🎯 What I'm Up To
 
-- 🔭 Currently working on **Scalable E-commerce Backend Systems**
-- 🌱 Learning **FastAPI, Microservices, GraphQL**
-- 👯 Looking to collaborate on **Open Source Backend Projects**
-- 💬 Ask me about **Django, PostgreSQL, API Design**
-- 📫 Reach me at **afzalbek.makhmudovv@gmail.com**
+- 🔭 Currently working on **Scalable E-commerce Backend with Django & DRF**
+- 🌱 Learning **Advanced DRF, Celery, Django Channels**
+- 👯 Looking to collaborate on **Open Source Django Projects**
+- 💬 Ask me about **Django, DRF, PostgreSQL, API Design**
+- 📫 Reach me at **afzalbek.777777@gmail.com**
 - ⚡ Fun fact: **I debug with milk tea, not coffee! ☕🥛**
 
 ---
@@ -65,7 +65,7 @@ me.say_hi()
 
 <p align="center">
   <a href="https://t.me/mahmudov_blog"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/></a>
-  <a href="mailto:afzalbek.makhmudovv@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="mailto:afzalbek.777777@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://x.com/Afzalbek_m"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
   <a href="https://pinterest.com/afzalbek_mahmudov"><img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white"/></a>
   <a href="https://linkedin.com/in/yourprofile"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
@@ -92,8 +92,8 @@ me.say_hi()
 <p align="left">
   <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
   <img src="https://img.shields.io/badge/DRF-ff1709?style=for-the-badge&logo=django&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
   <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Channels-092E20?style=for-the-badge&logo=django&logoColor=white"/>
 </p>
 </details>
 
@@ -151,8 +151,8 @@ me.say_hi()
 | Project | Description | Tech Stack | Status |
 |---------|-------------|------------|--------|
 | 🛒 **E-Commerce API** | Full-featured REST API for online shopping | Django, DRF, PostgreSQL | 🚀 Active |
-| 📱 **Telegram Bot** | AI-powered customer service bot | Aiogram, FastAPI | ✅ Complete |
-| 🔐 **Auth System** | JWT authentication microservice | FastAPI, Redis | 🔨 In Progress |
+| 📱 **Telegram Bot** | AI-powered customer service bot | Aiogram, Django | ✅ Complete |
+| 🔐 **Auth System** | JWT authentication with DRF | Django, DRF, Redis | 🔨 In Progress |
 
 </div>
 
@@ -163,8 +163,9 @@ me.say_hi()
 <!-- BLOG-POST-LIST:START -->
 - 🔥 Building Scalable APIs with Django REST Framework
 - 💡 PostgreSQL Performance Optimization Tips
-- 🚀 Introduction to FastAPI for Django Developers
+- 🚀 Advanced DRF: Custom Permissions & Authentication
 - 🐳 Dockerizing Django Applications
+- 🔐 JWT Authentication Best Practices in DRF
 <!-- BLOG-POST-LIST:END -->
 
 ---
@@ -208,23 +209,60 @@ class ProductViewSet(viewsets.ModelViewSet):
 </details>
 
 <details>
-<summary><b>⚡ FastAPI Async Endpoint</b></summary>
+<summary><b>⚡ DRF ViewSet with Advanced Features</b></summary>
 
 ```python
-from fastapi import FastAPI, Depends, HTTPException
-from sqlalchemy.ext.asyncio import AsyncSession
+from rest_framework import viewsets, status
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from django_filters.rest_framework import DjangoFilterBackend
+from django.db.models import Avg, Count
 
-app = FastAPI(title="Modern API")
-
-@app.get("/users/{user_id}")
-async def get_user(
-    user_id: int,
-    db: AsyncSession = Depends(get_db)
-):
-    user = await db.get(User, user_id)
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
-    return user
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.select_related('category').prefetch_related('reviews')
+    serializer_class = ProductSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category', 'price']
+    search_fields = ['name', 'description']
+    
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return ProductListSerializer
+        return ProductDetailSerializer
+    
+    @action(detail=False, methods=['get'])
+    def trending(self, request):
+        """Get trending products based on views and ratings"""
+        trending = self.get_queryset().annotate(
+            avg_rating=Avg('reviews__rating'),
+            review_count=Count('reviews')
+        ).filter(avg_rating__gte=4.0).order_by('-views', '-review_count')[:10]
+        
+        serializer = self.get_serializer(trending, many=True)
+        return Response(serializer.data)
+    
+    @action(detail=True, methods=['post'])
+    def add_to_cart(self, request, pk=None):
+        """Add product to user's cart"""
+        product = self.get_object()
+        quantity = request.data.get('quantity', 1)
+        
+        cart_item, created = CartItem.objects.get_or_create(
+            user=request.user,
+            product=product,
+            defaults={'quantity': quantity}
+        )
+        
+        if not created:
+            cart_item.quantity += quantity
+            cart_item.save()
+        
+        return Response(
+            {'status': 'Product added to cart'},
+            status=status.HTTP_201_CREATED
+        )
 ```
 </details>
 
